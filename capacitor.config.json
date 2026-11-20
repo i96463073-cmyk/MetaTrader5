@@ -1,6 +1,6 @@
 
 {
-  "appId": "com.meta trader5",
-  "appName": "Meta Trader5",
+  "appId": "com.mt5.simulator",
+  "appName": "MT5 Simulator",
   "webDir": "www"
 }
