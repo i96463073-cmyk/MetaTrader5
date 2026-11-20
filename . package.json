@@ -1,6 +1,6 @@
 
 {
-  "name": "MetaTrader5",
+  "name": "mt5-simulator",
   "version": "1.0.0",
   "private": true,
   "scripts": {
