@@ -1,5 +1,4 @@
-
-name: Build MT5 Simulator APK
+name: Build MetaTrader5 APK
 
 on:
   workflow_dispatch:
@@ -38,6 +37,11 @@ jobs:
       - name: Add Android platform
         run: npx cap add android
 
+      # 👇 THIS IS THE NEW STEP TO GENERATE THE ICON 👇
+      - name: Generate Android App Icons
+        run: npx @capacitor/assets generate --android
+      # 👆 ------------------------------------------ 👆
+
       - name: Sync Android project
         run: npx cap sync android
 
@@ -50,6 +54,6 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: MT5-Simulator-APK
+          name: MetaTrader5-APK
           path: android/app/build/outputs/apk/debug/app-debug.apk
           retention-days: 30
